@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>WCA OCR & Avg Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>WCA OCR & Average Calculator</h1>
+
+    <!-- OCR Upload Section -->
+    <section>
+      <h2>Extract Times from Image</h2>
+      <input type="file" id="imageInput" accept="image/*" />
+      <button onclick="extractText()">Extract Text</button>
+      <pre id="ocrResult">OCR result will appear here...</pre>
+    </section>
+
+    <!-- Manual Input Section -->
+    <section>
+      <h2>Enter Times Manually</h2>
+      <input type="text" id="timesInput" placeholder="Enter 5 times, space-separated" />
+      <button onclick="calculateAverage()">Calculate WCA Average</button>
+      <div id="avgResult"></div>
+    </section>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/tesseract.js@4"></script>
+  <script src="script.js"></script>
+</body>
+</html>
